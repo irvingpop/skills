@@ -1,0 +1,15 @@
+{
+  "name": "irvingpop",
+  "description": "Agent skills by Irving Popovetsky",
+  "owner": {
+    "name": "Irving Popovetsky",
+    "url": "https://github.com/irvingpop"
+  },
+  "plugins": [
+    {
+      "name": "orca-coordinator",
+      "source": "./plugins/orca-coordinator",
+      "description": "Run a task as an Orca coordinator session that plans, dispatches, reviews, and rules, while Orca workers do the work."
+    }
+  ]
+}

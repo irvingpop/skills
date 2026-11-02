@@ -1,0 +1,12 @@
+{
+  "name": "orca-coordinator",
+  "description": "Run a task as an Orca coordinator session that plans, dispatches, reviews, and rules, while Orca workers do the work.",
+  "author": {
+    "name": "Irving Popovetsky",
+    "url": "https://github.com/irvingpop"
+  },
+  "homepage": "https://github.com/irvingpop/skills/tree/main/plugins/orca-coordinator",
+  "repository": "https://github.com/irvingpop/skills",
+  "license": "Apache-2.0",
+  "keywords": ["orca", "orchestration", "multi-agent", "coordinator"]
+}
