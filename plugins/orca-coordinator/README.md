@@ -50,7 +50,7 @@ On Claude Code older than 2.1.275, run `/plugin marketplace add irvingpop/skills
 
 If another skill also uses the name `coordinator`, run `/orca-coordinator:coordinator` instead.
 
-The coordinator asks you before anything hard to reverse (push, publish, delete, merge, spend money), before it changes the goal, and when every option is a guess. It decides everything else and lists its rulings in the final report.
+The coordinator asks you before anything hard to reverse (publish, delete, merge, spend money), before it changes the goal, and when every option is a guess. It decides everything else and lists its rulings in the final report.
 
 ## Files
 

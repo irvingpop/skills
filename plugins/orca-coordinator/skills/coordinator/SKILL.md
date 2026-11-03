@@ -24,7 +24,7 @@ You plan the tasks, write specs, rule on questions, keep the ledger, and report 
 
 Choose whoever costs your context the least.
 
-- **You:** known steps, short output, nothing to review (commit reviewed work, one status command). At the first unexpected result, delegate.
+- **You:** known steps, short output, nothing to review (commit reviewed work, one status command). If a permission check blocks a worker from an action such as a push or opening a PR, do that action yourself. At the first unexpected result, delegate.
 - **Subagent:** reading, searching, test runs, lookups, scoped re-reviews of a fix, and other work that needs no full review. Brief it with the outcome, where to look, and a return of 20 lines or less; longer detail goes to a file in the task folder (see "Start").
 - **Worker:** an authored change to code, configuration, or a document; task and final reviews; research verification; work that needs Codex or its own worktree.
 
@@ -76,7 +76,7 @@ Write each ruling to the ledger: `Ruling: <decision> | Reason: <why> | Cost if w
 
 Stop and ask only for these:
 
-- An action that is hard to reverse, destructive, security-sensitive, or outside the repo: publish, push, send, delete, merge, spend money.
+- An action that is hard to reverse, destructive, security-sensitive, or outside the repo: publish, send, delete, merge, spend money.
 - A change to the goal or the done criteria, or evidence that the goal is wrong.
 - A choice where every option is a guess and the cost if wrong is more than one wave of rework.
 
