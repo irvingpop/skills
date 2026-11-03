@@ -22,6 +22,22 @@ plugins/<plugin>/
 - Never rename a published plugin. Use `displayName` for a label change, or add to `renames` in `marketplace.json`.
 - Plugins have no `version` field on purpose: users track commits on `main`. Ignore the validator warning about it.
 
+## Writing skill text
+
+Write the least instruction that gets the right behavior. The model that reads a skill is capable: give it the goal, the constraints it cannot work out, and the formats that other parties depend on, then trust its judgment for the rest. Redoing work is usually cheap, and an over-specified rule fails in the cases its author did not foresee.
+
+Keep:
+- What the model cannot work out: the user's limits (what needs approval, budgets), choices the user made (models, tools, file locations), and contracts with other agents or tools (formats, paths, commands).
+- A rule that a test showed is needed. Say what failure it prevents.
+
+Cut:
+- Anything another skill or the tool itself already says. Point to it.
+- A rule stated twice in one skill.
+- Example lists, decision trees, and step-by-step procedures where one sentence of principle does the job.
+- Rules that a tool's own error messages already enforce.
+
+Before you add a rule, ask: would a capable colleague get this wrong without it? If not, leave it out.
+
 ## Adding a plugin
 
 1. Create `plugins/<plugin>/` with `plugin.json`, `README.md`, and `skills/`.

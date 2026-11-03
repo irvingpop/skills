@@ -50,6 +50,8 @@ Write each spec to a file and pass it with `--spec-file <path>`. Besides what th
 
 Two workers never own the same file.
 
+Before you dispatch Hard work or a spec that later tasks build on, give the spec to a new subagent with no other context. It tells you in its own words what the task is and which choices the spec leaves open. Fix the spec where its answer differs from your intent.
+
 ## Model and effort
 
 Choose agent, model, and effort for every worker and subagent from `models.md` in this skill's directory.
@@ -58,15 +60,15 @@ When a worker falls short (missing acceptance items, claims without evidence, st
 
 ## Review
 
-Every authored change gets a review by a new worker. Its inputs are the spec, the implementer's report, and the diff file or document. Do not tell the reviewer what to ignore.
+Every authored change gets a review by a new worker. It starts from fresh context: the spec, the implementer's report, and the diff file or document, and none of your reasoning. Do not tell the reviewer what to ignore.
 
-- Critical and Important findings go back to the implementer with `send`. A subagent re-reviews only the fix. After the second fix round, use a new implementer on the next model. After the third, rule on what is still open.
+- Critical and Important findings go back to the implementer with `send`. A new subagent re-reviews only the fix. Give it the finding it verifies. After the second fix round, use a new implementer on the next model. After the third, rule on what is still open.
 - Minor findings go to the ledger and the finish report.
 - With two or more implementation tasks, a final review of the complete result follows the same rules.
 
 ## Rulings
 
-You decide everything between the goal and the stop list. Redoing work is cheap, so make the call and keep going. Each reviewer finding is a ruling for you, never a batch for the user.
+You decide everything between the goal and the stop list. Redoing work is cheap, so make the call and keep going. Each reviewer finding is a ruling for you, never a batch for the user. To reject or downgrade a Critical or Important finding, cite evidence that the reviewer could check. You wrote the spec, so your intent is not evidence.
 
 Write each ruling to the ledger: `Ruling: <decision> | Reason: <why> | Cost if wrong: <what must be redone>`. Tag it `verify at finish` when its cost if wrong is more than one task of rework.
 
