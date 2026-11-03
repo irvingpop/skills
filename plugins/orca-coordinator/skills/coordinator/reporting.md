@@ -21,7 +21,7 @@ Write the diff of the files you own, including uncommitted changes and new files
 
 ## Review format (reviewers)
 
-Your summary's outcome gives two verdicts: spec compliance (pass or fail) and quality (pass or fail). After the summary, list each finding with its severity:
+Your summary's outcome gives two verdicts: spec compliance (pass or fail) and quality (pass or fail). Quality also fails for needless additions and needless duplication. After the summary, list each finding with its severity:
 
 - **Critical:** the change is wrong, unsafe, or breaks something.
 - **Important:** the change does not meet the spec, or has a defect that must be fixed before it is done.
